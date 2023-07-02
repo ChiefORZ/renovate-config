@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "assignAutomerge": false,
+  "assignees": ["ChiefORZ"],
+  "extends": [
+    "config:js-lib",
+    ":prHourlyLimitNone",
+    ":automergeMinor",
+    "group:allNonMajor",
+    "schedule:automergeEarlyMondays"
+  ],
+  "packageRules": [
+    {
+      "groupName": "internal",
+      "matchPackagePatterns": ["^@chieforz/"]
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "devDependencies (non-major)",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"]
+    }
+  ],
+  "platformAutomerge": true,
+  "semanticCommits": "enabled"
+}
