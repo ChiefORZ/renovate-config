@@ -4,6 +4,9 @@
   "assignees": ["ChiefORZ"],
   "extends": [
     "config:base",
+    ":prNotPending",
+    ":rebaseStalePrs",
+    ":updateNotScheduled",
     ":prHourlyLimitNone",
     ":automergeMinor",
     "group:allNonMajor",
