@@ -3,7 +3,7 @@
   "assignAutomerge": false,
   "assignees": ["ChiefORZ"],
   "extends": [
-    "config:js-lib",
+    "config:base",
     ":prHourlyLimitNone",
     ":automergeMinor",
     "group:allNonMajor",
