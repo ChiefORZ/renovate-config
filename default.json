@@ -8,25 +8,23 @@
     ":rebaseStalePrs",
     ":updateNotScheduled",
     ":prHourlyLimitNone",
+    ":separateMultipleMajorReleases",
+    ":combinePatchMinorReleases",
+    ":automergePatch",
     ":automergeMinor",
-    "group:allNonMajor",
-    "schedule:automergeEarlyMondays"
+    "group:allNonMajor"
   ],
   "packageRules": [
     {
-      "groupName": "internal",
-      "matchPackagePatterns": ["^@chieforz/"]
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
     },
     {
-      "matchDepTypes": ["dependencies"],
-      "rangeStrategy": "bump"
-    },
-    {
-      "groupName": "devDependencies (non-major)",
       "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch", "minor"]
+      "automerge": true
     }
   ],
   "platformAutomerge": true,
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "schedule": ["before 3am on Monday"]
 }
