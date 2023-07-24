@@ -32,7 +32,7 @@
     }
   ],
   "platformAutomerge": true,
-  "prHourlyLimit": 1,
+  "prHourlyLimit": 0,
   "pruneStaleBranches": false,
   "rangeStrategy": "bump",
   "semanticCommits": "enabled"
