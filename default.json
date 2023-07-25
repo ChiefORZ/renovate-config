@@ -7,27 +7,23 @@
   "packageRules": [
     {
       "automerge": true,
+      "groupName": "internal",
       "matchPackagePatterns": ["chieforz"],
       "recreateClosed": true
     },
     {
       "automerge": true,
       "excludePackagePatterns": ["chieforz"],
+      "extends": ["schedule:earlyMondays"],
       "groupName": "external-non-major",
-      "matchCurrentVersion": ">=1.0.0",
       "matchUpdateTypes": ["minor", "patch"],
       "recreateClosed": true
     },
     {
       "excludePackagePatterns": ["chieforz"],
+      "extends": ["schedule:earlyMondays"],
+      "groupName": "external-major",
       "matchUpdateTypes": ["major"],
-      "recreateClosed": true
-    },
-    {
-      "excludePackagePatterns": ["chieforz"],
-      "groupName": "external-zero-minor",
-      "matchCurrentVersion": "<1.0.0",
-      "matchUpdateTypes": ["minor"],
       "recreateClosed": true
     }
   ],
