@@ -13,21 +13,14 @@
   ],
   "packageRules": [
     {
-      "assignees": [
-        "ChiefORZ"
-      ],
+      "assignees": ["ChiefORZ"],
       "automerge": true,
       "automergeStrategy": "rebase",
-      "automergeType": "pr",
+      "automergeType": "branch",
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ],
-      "schedule": [
-        "before 3am on Monday"
-      ]
+      "matchUpdateTypes": ["patch", "minor"],
+      "schedule": ["before 3am on Monday"]
     }
   ],
   "platformAutomerge": true,
