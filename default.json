@@ -25,6 +25,10 @@
       "groupName": "external-major",
       "matchUpdateTypes": ["major"],
       "recreateClosed": true
+    },
+    {
+      "packageNames": ["node", "pnpm"],
+      "enabled": false
     }
   ],
   "platformAutomerge": true,
