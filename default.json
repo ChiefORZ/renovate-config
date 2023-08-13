@@ -27,7 +27,8 @@
       "recreateClosed": true
     },
     {
-      "packageNames": ["node", "pnpm"],
+      "packageNames": ["node"],
+      "excludePackagePatterns": ["pnpm"],
       "enabled": false
     }
   ],
