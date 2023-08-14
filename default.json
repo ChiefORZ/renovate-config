@@ -20,7 +20,7 @@
       "recreateClosed": true
     },
     {
-      "excludePackagePatterns": ["chieforz"],
+      "excludePackagePatterns": ["chieforz", "pnpm"],
       "extends": ["schedule:earlyMondays"],
       "groupName": "external-major",
       "matchUpdateTypes": ["major"],
